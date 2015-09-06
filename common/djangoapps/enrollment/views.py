@@ -31,7 +31,7 @@ from enrollment.errors import (
     CourseNotFoundError, CourseEnrollmentError,
     CourseModeNotFoundError, CourseEnrollmentExistsError
 )
-from student.auth import user_has_role
+from student.auth import has_access
 from student.models import User
 from student.roles import CourseStaffRole, GlobalStaff
 
@@ -371,7 +371,7 @@ class EnrollmentListView(APIView, ApiKeyPermissionMixIn):
         filtered_data = []
         for enrollment in enrollment_data:
             course_key = CourseKey.from_string(enrollment["course_details"]["course_id"])
-            if user_has_role(request.user, CourseStaffRole(course_key)):
+            if has_access(request.user, CourseStaffRole(course_key)):
                 filtered_data.append(enrollment)
         return Response(filtered_data)
 
