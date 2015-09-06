@@ -93,7 +93,8 @@ class ThreadActionGroupIdTestCase(
                 "user_id": str(self.student.id),
                 "group_id": self.student_cohort.id,
                 "closed": False,
-                "type": "thread"
+                "type": "thread",
+                "commentable_id": "commentable_id",
             }
         )
         mock_request.return_value.status_code = 200
@@ -993,7 +994,6 @@ class CreateSubCommentUnicodeTestCase(ModuleStoreTestCase, UnicodeTestMixin, Moc
 
 
 @ddt.ddt
-@disable_signal(views, 'comment_created')
 class ForumEventTestCase(ModuleStoreTestCase, MockRequestSetupMixin):
     """
     Forum actions are expected to launch analytics events. Test these here.
