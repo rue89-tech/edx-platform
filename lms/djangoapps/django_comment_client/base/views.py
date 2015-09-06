@@ -134,8 +134,8 @@ def track_voted_event(request, course, obj, vote_value, undo_vote=False, id_map=
     track_forum_event(request, event_name, course, obj, event_data, id_map=id_map)
 
 
-def permitted(fn):
-    @functools.wraps(fn)
+def permitted(func):
+    @functools.wraps(func)
     def wrapper(request, *args, **kwargs):
         def fetch_content():
             if "thread_id" in kwargs:
@@ -149,7 +149,7 @@ def permitted(fn):
             return content
         course_key = SlashSeparatedCourseKey.from_deprecated_string(kwargs['course_id'])
         if check_permissions_by_view(request.user, course_key, fetch_content(), request.view_name):
-            return fn(request, *args, **kwargs)
+            return func(request, *args, **kwargs)
         else:
             return JsonError("unauthorized", status=401)
     return wrapper
@@ -432,6 +432,9 @@ def delete_comment(request, course_id, comment_id):
 
 
 def _vote_or_unvote(request, course_id, obj, value):
+    """
+    Vote or unvote for a thread or a response.
+    """
     course_key = SlashSeparatedCourseKey.from_deprecated_string(course_id)
     course = get_course_with_access(request.user, 'load', course_key)
     user = cc.User.from_django_user(request.user)
@@ -452,11 +455,10 @@ def _vote_or_unvote(request, course_id, obj, value):
 @permitted
 def vote_for_comment(request, course_id, comment_id, value):
     """
-    given a course_id and comment_id,
+    Given a course_id and comment_id, vote for this response.  AJAX only.
     """
     comment = cc.Comment.find(comment_id)
     result = _vote_or_unvote(request, course_id, comment, value)
-    comment_voted.send(sender=None, user=request.user, post=comment)
     return result
 
 
@@ -481,7 +483,6 @@ def vote_for_thread(request, course_id, thread_id, value):
     """
     thread = cc.Thread.find(thread_id)
     result = _vote_or_unvote(request, course_id, thread, value)
-    thread_voted.send(sender=None, user=request.user, post=thread)
     return result
 
 
