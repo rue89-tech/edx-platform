@@ -142,8 +142,6 @@ def permitted(func):
                 content = cc.Thread.find(kwargs["thread_id"]).to_dict()
             elif "comment_id" in kwargs:
                 content = cc.Comment.find(kwargs["comment_id"]).to_dict()
-            elif "commentable_id" in kwargs:
-                content = cc.Commentable.find(kwargs["commentable_id"]).to_dict()
             else:
                 content = None
             return content
