@@ -13162,10 +13162,10 @@ msgstr "Actions disponibles"
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "Are you sure you want to unenroll from the purchased course "
-"%(course_number)s?"
+"%(course_number)s %(course_name)s?"
 msgstr ""
 "Êtes-vous sûr de vouloir vous désinscrire du cours payant %(course_number)s "
-"?"
+"%(course_name)s ?"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You will be refunded the amount you paid."
@@ -13176,13 +13176,13 @@ msgid "You will not be refunded the amount you paid."
 msgstr "Le montant payé ne vous sera pas remboursé."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-msgid "Are you sure you want to unenroll from %(course_number)s?"
-msgstr "Êtes-vous sûr de vouloir vous désinscrire de %(course_number)s ?"
+msgid "Are you sure you want to unenroll from %(course_number)s %(course_name)s?"
+msgstr "Êtes-vous sûr de vouloir vous désinscrire de %(course_number)s %(course_name)s ?"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "Are you sure you want to unenroll from the verified {cert_name_long} track "
-"of %(course_number)s?"
+"of %(course_number)s %(course_name)s?"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
