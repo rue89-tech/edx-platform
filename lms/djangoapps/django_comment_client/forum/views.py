@@ -267,7 +267,7 @@ def forum_form_discussion(request, course_key):
             'staff_access': has_access(request.user, 'staff', course),
             'threads': json.dumps(threads),
             'thread_pages': query_params['num_pages'],
-            'user_info': _json.dumps(user_info, default=lambda x: None),
+            'user_info': json.dumps(user_info, default=lambda x: None),
             'flag_moderator': (
                 has_permission(request.user, 'openclose_thread', course.id) or
                 has_access(request.user, 'staff', course)
