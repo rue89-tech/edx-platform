@@ -20978,3 +20978,16 @@ msgid ""
 msgstr ""
 "Une nouvelle révision a été créée : Fusion entre la révision #%(r1)d et la "
 "révision #%(r2)d"
+
+#: lms/templates/dashboard.html
+msgid "Want to change your account settings?"
+msgstr "Vous voulez changer vos paramètres ?"
+
+#: lms/templates/dashboard.html
+msgid "Click the arrow next to your username above."
+msgstr "Cliquez sur la flèche à côté de votre nom de compte."
+
+#: lms/templates/navigation-edx.html
+#: lms/templates/navigation.html
+msgid "My Profile"
+msgstr "Mon profil"
