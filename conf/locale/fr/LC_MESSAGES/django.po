@@ -20989,5 +20989,5 @@ msgstr "Cliquez sur la flèche à côté de votre nom de compte."
 
 #: lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
-msgid: "My Profile"
-msgstr: "Mon profil"
+msgid "My Profile"
+msgstr "Mon profil"
