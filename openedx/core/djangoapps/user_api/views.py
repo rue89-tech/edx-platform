@@ -449,11 +449,12 @@ class RegistrationView(APIView):
         # form used to select the user's highest completed level of education.
         education_level_label = _(u"Highest level of education completed")
 
+        options = [(name, _(label)) for name, label in UserProfile.LEVEL_OF_EDUCATION_CHOICES]
         form_desc.add_field(
             "level_of_education",
             label=education_level_label,
             field_type="select",
-            options=UserProfile.LEVEL_OF_EDUCATION_CHOICES,
+            options=options,
             include_default_option=True,
             required=required
         )
@@ -472,11 +473,12 @@ class RegistrationView(APIView):
         # form used to select the user's gender.
         gender_label = _(u"Gender")
 
+        options = [(name, _(label)) for name, label in UserProfile.GENDER_CHOICES]
         form_desc.add_field(
             "gender",
             label=gender_label,
             field_type="select",
-            options=UserProfile.GENDER_CHOICES,
+            options=options,
             include_default_option=True,
             required=required
         )

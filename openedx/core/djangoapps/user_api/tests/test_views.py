@@ -998,6 +998,32 @@ class RegistrationViewTest(ThirdPartyAuthTestMixin, ApiTestCase):
             }
         )
 
+    @mock.patch('openedx.core.djangoapps.user_api.views._')
+    def test_register_form_level_of_education_translations(self, fake_gettext):
+        fake_gettext.side_effect = lambda text: text + ' TRANSLATED'
+
+        self._assert_reg_field(
+            {"level_of_education": "optional"},
+            {
+                "name": "level_of_education",
+                "type": "select",
+                "required": False,
+                "label": "Highest level of education completed TRANSLATED",
+                "options": [
+                    {"value": "", "name": "--", "default": True},
+                    {"value": "p", "name": "Doctorate TRANSLATED"},
+                    {"value": "m", "name": "Master's or professional degree TRANSLATED"},
+                    {"value": "b", "name": "Bachelor's degree TRANSLATED"},
+                    {"value": "a", "name": "Associate degree TRANSLATED"},
+                    {"value": "hs", "name": "Secondary/high school TRANSLATED"},
+                    {"value": "jhs", "name": "Junior secondary/junior high/middle school TRANSLATED"},
+                    {"value": "el", "name": "Elementary/primary school TRANSLATED"},
+                    {"value": "none", "name": "None TRANSLATED"},
+                    {"value": "other", "name": "Other TRANSLATED"},
+                ],
+            }
+        )
+
     def test_register_form_gender(self):
         self._assert_reg_field(
             {"gender": "optional"},
@@ -1014,6 +1040,27 @@ class RegistrationViewTest(ThirdPartyAuthTestMixin, ApiTestCase):
                 ],
             }
         )
+
+    @mock.patch('openedx.core.djangoapps.user_api.views._')
+    def test_register_form_gender_translations(self, fake_gettext):
+        fake_gettext.side_effect = lambda text: text + ' TRANSLATED'
+
+        self._assert_reg_field(
+            {"gender": "optional"},
+            {
+                "name": "gender",
+                "type": "select",
+                "required": False,
+                "label": "Gender TRANSLATED",
+                "options": [
+                    {"value": "", "name": "--", "default": True},
+                    {"value": "m", "name": "Male TRANSLATED"},
+                    {"value": "f", "name": "Female TRANSLATED"},
+                    {"value": "o", "name": "Other TRANSLATED"},
+                ],
+            }
+        )
+
 
     def test_register_form_year_of_birth(self):
         this_year = datetime.datetime.now(UTC).year  # pylint: disable=maybe-no-member
