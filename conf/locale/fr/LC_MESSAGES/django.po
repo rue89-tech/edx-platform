@@ -9297,7 +9297,7 @@ msgid ""
 " a different email address."
 msgstr ""
 "Il semblerait que {email_address} appartient à un compte existant. Essayez à"
-" vouveau avec une adresse email différente."
+" nouveau avec une adresse email différente."
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid ""
@@ -9305,7 +9305,7 @@ msgid ""
 "different username."
 msgstr ""
 "Il semblerait que {username} appartient à un compte existant. Essayez à "
-"vouveau avec un nom d'utilisateur différent."
+"nouveau avec un nom d'utilisateur différent."
 
 #. Translators: This example name is used as a placeholder in
 #. a field on the registration form meant to hold the user's name.
@@ -9377,7 +9377,7 @@ msgstr "Conditions générales du service et code d'honneur"
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid "I agree to the {platform_name} {terms_of_service}."
-msgstr "J'acccepte les {terms_of_service} {platform_name}."
+msgstr "J'accepte les {terms_of_service} {platform_name}."
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid "You must agree to the {platform_name} {terms_of_service}."

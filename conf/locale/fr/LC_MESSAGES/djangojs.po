@@ -2455,6 +2455,10 @@ msgstr "Image"
 msgid "Reply"
 msgstr "Répondre"
 
+#: common/static/js/utils/edx.utils.validate.js
+msgid "Please enter your %(field)s."
+msgstr "Veuillez entrer votre %(field)s."
+
 #: common/static/js/vendor/ova/catch/js/catch.js
 #: lms/templates/edxnotes/note-item.underscore
 msgid "Tags:"
