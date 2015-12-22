@@ -5131,14 +5131,14 @@ msgstr ""
 
 #: lms/djangoapps/certificates/views/webview.py
 msgid ""
-"a course of study offered by {partner_short_name}, through {platform_name}."
-msgstr ""
+"a course of study offered by {partner_name}, through {platform_name}."
+msgstr "Un cours proposé par Rue89 MOO."
 
 #. Translators: Accomplishments describe the awards/certifications obtained by
 #. students on this platform
 #: lms/djangoapps/certificates/views/webview.py
 msgid "About {platform_name} Accomplishments"
-msgstr ""
+msgstr "A propos de l'attestation {platform_name}"
 
 #: lms/djangoapps/certificates/views/webview.py
 msgid "More Information About {user_name}'s Certificate:"
@@ -5171,7 +5171,7 @@ msgid ""
 "<a href='{tos_url}'>{platform_name} Honor Code</a>.  Some certificates "
 "require completing additional steps, such as <a href='{verified_cert_url}'> "
 "verifying your identity</a>."
-msgstr ""
+msgstr "Les attestations de Rue89 MOOC garantissent le suivi du MOOC dans sa totalité ainsi que la réalisation des diverses activités proposées. L'étudiant atteste sous l'honneur son engagement à la Charte Utilisateur."
 
 #: lms/djangoapps/certificates/views/webview.py
 msgid "How {platform_name} Validates Student Certificates"
@@ -5199,7 +5199,9 @@ msgid ""
 " best universities, including MIT, Harvard, Berkeley, University of Texas, "
 "and many others.  {platform_name} is a non-profit online initiative created "
 "by founding partners Harvard and MIT."
-msgstr ""
+msgstr "Rue89 MOOC propose des formations en ligne interactives. "
+"L’ambition de Rue89 MOOC est de fournir un accès à la formatio, "
+"basé sur le partage du savoir, de l'expérience et des connaissances acquises."
 
 #: lms/djangoapps/certificates/views/webview.py
 msgid "About {platform_name}"
@@ -5225,7 +5227,7 @@ msgstr "Contacter {platform_name}"
 #. describes the guarantee provided by edX
 #: lms/djangoapps/certificates/views/webview.py
 msgid "{platform_name} acknowledges the following student accomplishment"
-msgstr ""
+msgstr "{platform_name} atteste que"
 
 #. Translators:  This text represents the verification of the certificate
 #: lms/djangoapps/certificates/views/webview.py
@@ -5237,8 +5239,8 @@ msgstr ""
 #. Translators:  This text is bound to the HTML 'title' element of the page
 #. and appears in the browser title bar
 #: lms/djangoapps/certificates/views/webview.py
-msgid "{partner_short_name} {course_number} Certificate | {platform_name}"
-msgstr ""
+msgid "{partner_name} {course_number} Certificate | {platform_name}"
+msgstr "Attestation | Rue89"
 
 #. Translators:  This text fragment appears after the student's name
 #. (displayed in a large font) on the certificate
@@ -5248,7 +5250,8 @@ msgstr ""
 msgid ""
 "successfully completed, received a passing grade, and was awarded a "
 "{platform_name} {certificate_type} Certificate of Completion in "
-msgstr ""
+msgstr "a suivi la totalité et a réussi les quiz et le cas pratiqu"
+"e de la formation en ligne suivante :"
 
 #. Translators: This line is displayed to a user who has completed a course
 #. and achieved a certification
@@ -5269,7 +5272,7 @@ msgstr ""
 #. certificate that a student has been awarded
 #: lms/djangoapps/certificates/views/webview.py
 msgid "More about {fullname}'s accomplishment"
-msgstr ""
+msgstr "En savoir plus au sujet de {fullname}"
 
 #. Translators:  'All rights reserved' is a legal term used in copyrighting to
 #. protect published content
