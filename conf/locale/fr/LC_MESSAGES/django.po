@@ -5132,7 +5132,7 @@ msgstr ""
 #: lms/djangoapps/certificates/views/webview.py
 msgid ""
 "a course of study offered by {partner_name}, through {platform_name}."
-msgstr "Un cours proposé par Rue89 MOO."
+msgstr "Un cours proposé par Rue89 MOOC."
 
 #. Translators: Accomplishments describe the awards/certifications obtained by
 #. students on this platform
