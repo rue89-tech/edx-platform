@@ -5132,7 +5132,7 @@ msgstr ""
 #: lms/djangoapps/certificates/views/webview.py
 msgid ""
 "a course of study offered by {partner_name}, through {platform_name}."
-msgstr "Un cours proposé par Rue89 MOOC."
+msgstr "Un cours proposé par Rue89 MOOC"
 
 #. Translators: Accomplishments describe the awards/certifications obtained by
 #. students on this platform
@@ -5200,7 +5200,7 @@ msgid ""
 "and many others.  {platform_name} is a non-profit online initiative created "
 "by founding partners Harvard and MIT."
 msgstr "Rue89 MOOC propose des formations en ligne interactives. "
-"L’ambition de Rue89 MOOC est de fournir un accès à la formatio, "
+"L’ambition de Rue89 MOOC est de fournir un accès à la formation, "
 "basé sur le partage du savoir, de l'expérience et des connaissances acquises."
 
 #: lms/djangoapps/certificates/views/webview.py
@@ -5257,7 +5257,7 @@ msgstr "a suivi la totalité et a réussi les quiz et le cas pratiqu"
 #. and achieved a certification
 #: lms/djangoapps/certificates/views/webview.py
 msgid "{fullname}, you've earned a certificate!"
-msgstr ""
+msgstr "{fullname}, vous avez obtenu une attestation !"
 
 #. Translators: This line congratulates the user and instructs them to share
 #. their accomplishment on social networks
@@ -5266,7 +5266,8 @@ msgid ""
 "Congratulations! This page summarizes all of the details of what you've "
 "accomplished. Show it off to family, friends, and colleagues in your social "
 "and professional networks."
-msgstr ""
+msgstr "Félicitations ! Cette page résume votre parcours de formation. "
+"Montrez la à votre famille, vos amis et collègues, sur les réseaux sociaux et professionnel."
 
 #. Translators: This line leads the reader to understand more about the
 #. certificate that a student has been awarded
