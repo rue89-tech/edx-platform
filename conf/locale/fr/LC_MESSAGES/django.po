@@ -13014,7 +13014,7 @@ msgstr "Votre note finale :"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Grade required for a {cert_name_short}:"
-msgstr "Note requise pour le {cert_name_short}:"
+msgstr "Note requise pour {cert_name_short}:"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid ""
