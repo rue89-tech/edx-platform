@@ -7,6 +7,7 @@ from config_models.models import ConfigurationModel
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from django.core.files.base import ContentFile
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from jsonfield import JSONField
@@ -97,7 +98,7 @@ class BadgeClass(models.Model):
             description=description,
             criteria=criteria,
         )
-        badge_class.image.save(image_file_handle.name, image_file_handle)
+        badge_class.image.save(image_file_handle.name, ContentFile(image_file_handle.read()))
         badge_class.full_clean()
         badge_class.save()
         return badge_class
